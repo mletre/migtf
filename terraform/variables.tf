@@ -29,8 +29,3 @@ variable "subnet_proxy" {
   type    = string
   default = "https://www.googleapis.com/compute/v1/projects/dla-infra-team-sandbox/regions/asia-southeast2/subnetworks/reverse-subnet-for-lb"
 }
-
-variable "service_account_key" {
-  description = "Service account key in JSON format"
-  type        = string
-}
