@@ -17,6 +17,7 @@ resource "google_compute_instance_template" "new_template" {
   description  = "Managed By Terraform"
   name         = "app-vm-template-${random_string.instance_name.result}"
   machine_type = "e2-small"
+  region       = var.region
   tags         = ["custom"]
 
   # resource_manager_tags = {
