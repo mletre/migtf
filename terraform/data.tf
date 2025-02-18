@@ -4,6 +4,7 @@ data "google_compute_disk" "source_disk" {
   zone = var.zone
 }
 
+
 # Create random string for unique name
 resource "random_string" "instance_name" {
   length  = 8

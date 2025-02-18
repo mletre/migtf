@@ -24,7 +24,7 @@ variable "subnet" {
   default = "https://www.googleapis.com/compute/v1/projects/dla-infra-team-sandbox/regions/asia-southeast2/subnetworks/sub-net-akhid"
 }
 
-# Subnet Proxy for Regional Load Balance
+# Subnet Proxy for Regional Load Balancer
 variable "subnet_proxy" {
   type    = string
   default = "https://www.googleapis.com/compute/v1/projects/dla-infra-team-sandbox/regions/asia-southeast2/subnetworks/reverse-subnet-for-lb"

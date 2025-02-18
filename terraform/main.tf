@@ -1,7 +1,6 @@
 terraform {
   backend "gcs" {
     bucket = "tf-bakend-state-666"
-    # credentials = var.TF_VAR_service_account_key
   }
   required_providers {
 
