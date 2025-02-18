@@ -19,6 +19,7 @@ pipeline {
         }
         stage('Update Code To Master Instance') {
             steps {
+                sh 'sleep 20'
                 sh 'scp html/* autouser@192.168.200.10:/var/www/html'
             }
         }
