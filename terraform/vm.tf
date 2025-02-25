@@ -1,8 +1,10 @@
 
 # Create Image From the Master Instance
 resource "google_compute_image" "from_disk" {
-  name        = "nginx-disk-image-${random_string.instance_name.result}"
-  source_disk = data.google_compute_disk.source_disk.self_link
+  name              = "nginx-disk-image-${random_string.instance_name.result}"
+  source_disk       = data.google_compute_disk.source_disk.self_link
+  storage_locations = ["asia-southeast2"]
+  description       = "Managed By Terraform"
   labels = {
     name            = "debian-disk-image-${random_string.instance_name.result}"
     applicationname = "cop"
@@ -148,7 +150,7 @@ resource "google_compute_region_autoscaler" "default" {
     mode            = "ON"
 
     cpu_utilization {
-      target = 0.60
+      target = 0.90
     }
 
     # scaling_schedules {
